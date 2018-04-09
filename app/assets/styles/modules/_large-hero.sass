@@ -1,0 +1,44 @@
+.large-hero 
+  position: relative
+  border-bottom: 10px solid $main-blue
+  &__image
+    display: block
+
+  &__text-content
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    width: 100%
+    text-align: center
+  &__title
+    font-weight: 300
+    color: $main-blue
+    margin: 0
+    font-size: 2.4rem
+    +mQ($sm)
+      font-size: 4.8rem
+      
+      
+  &__subtitle
+    font-weight: 300
+    color: $main-blue
+    margin: 0
+    font-size: 1.5rem
+    +mQ($sm)
+      font-size: 2.9rem
+
+  &__description
+    color: #ffffff
+    font-size: 1.1rem
+    font-weight: 100
+    text-shadow: 2px 2px 0px rgba(black, .1)
+    max-width: 30rem
+    margin-left: auto
+    margin-right: auto
+    +mQ($sm)
+      font-size: 1.875rem
+
+//.large-hero__image
+  //display: block
+

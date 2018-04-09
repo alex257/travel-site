@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-watch= require('gulp-watch');
+watch = require('gulp-watch'),
+sass = require('gulp-sass');
 
 gulp.task('default', function(){
     console.log("probaa");
@@ -9,8 +10,10 @@ gulp.task('html', function(){
   console.log("Imagine smth useful being done to your html here")
 });
 
-gulp.task('styles', function(){
-    console.log("Imagine sass or postcss task running here")
+gulp.task('sass', function(){
+    return gulp.src('./app/assets/styles/*.sass')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./app/temp/styles'));
   });
 
 gulp.task('watch', function(){
@@ -18,7 +21,6 @@ gulp.task('watch', function(){
         gulp.start('html');
     })
   });
-
-    watch('./app/assets/styles/**/*.css', function(){
-        gulp.start('styles');
-    });
+    watch('./app/assets/styles/**/*.sass', function(){
+        gulp.start('sass');
+  });
