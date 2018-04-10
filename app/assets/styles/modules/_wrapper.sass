@@ -9,6 +9,20 @@
     max-width: 976px
   &--bottom-mg
     margin-bottom: 3.785rem
+  
+  &--no-padding-until-md
+    padding-left: 0
+    padding-right: 0
+    +mQ($md)
+      padding-left: 18px
+      padding-right: 18px
+
+  &--no-padding-until-lg
+    padding-left: 0
+    padding-right: 0
+    +mQ($lg)
+      padding-left: 18px
+      padding-right: 18px
 
   .wrapper
     padding-left: 0

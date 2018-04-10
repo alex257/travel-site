@@ -5,4 +5,23 @@
   &--blue 
     background-color: $main-blue
     color: white 
+
+  &--no-bottom-pad-until-md
+    padding-bottom: 0
+    +mQ($md)
+      padding-bottom: 4.5rem
+
+  &--no-bottom-pad-until-lg
+    padding-bottom: 0
+    +mQ($lg)
+      padding-bottom: 4.5rem
+
     
+  &--testimonials
+    background-color: #e0e6ef
+    +mQ($lg)
+      background:
+        image: url("/assets/images/testimonials-bg.jpg") 
+        size: cover
+        position: top center
+        repeat: no-repeat
